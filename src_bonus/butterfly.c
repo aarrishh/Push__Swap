@@ -6,7 +6,7 @@
 /*   By: arimanuk <arimanuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:54:39 by arimanuk          #+#    #+#             */
-/*   Updated: 2025/05/12 19:38:27 by arimanuk         ###   ########.fr       */
+/*   Updated: 2025/05/12 19:44:39 by arimanuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	formula_n(int size)
 	return ((root_n(size)) + log_n(size));
 }
 
-int	get_position(t_stack *b, int value) //gpt
+int	get_position(t_stack *b, int value)
 {
 	int	pos;
 

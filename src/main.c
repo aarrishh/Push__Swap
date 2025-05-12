@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arimanuk <arimanuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:57:31 by arimanuk          #+#    #+#             */
-/*   Updated: 2025/05/11 17:50:48 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/12 19:18:34 by arimanuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// int main() {
-	
-// }
 
 int	main(int argc, char **argv)
 {
@@ -27,13 +23,12 @@ int	main(int argc, char **argv)
 	b = NULL;
 	str = NULL;
 	i = 1;
-
 	if (argc >= 2)
 	{
 		while (argv[i])
 		{
 			if (check_white_spaces(argv[i]) == 1)
-			print_error(&a);
+				print_error(&a);
 			str = ft_split(argv[i]);
 			helper(str, &a);
 			free_split(str);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arimanuk <arimanuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 17:46:12 by arimanuk          #+#    #+#             */
-/*   Updated: 2025/05/11 21:00:36 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/12 19:26:12 by arimanuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ typedef struct s_stack
 }	t_stack;
 
 // libft_functions
+int			is_white_space(char c);
 long long	ft_atoi(const char *str);
+char		**ft_split(char const *s);
 size_t		ft_strlen1(const char *str);
-char	**ft_split(char const *s);
-// char		**ft_split(char const *s, char *del);
 
 // operations
 void		sa(t_stack **a, int i);
@@ -57,7 +57,9 @@ void		free_stack(t_stack **stack);
 // butterfly_functions
 int			log_n(int size);
 int			formula_n(int size);
+int			find_max(t_stack *b);
 void		indexing(t_stack **a);
+int			get_position(t_stack *b, int value);
 void		move_b_to_a(t_stack **a, t_stack **b);
 void		butterfly(t_stack **a, t_stack **b, int n);
 

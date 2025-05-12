@@ -47,7 +47,7 @@ fclean: clean
 re: fclean all
 
 # test_my: $(NAME)
-# 	$(eval ARG = $(shell seq 0 2000000 | shuf | head -n 100))
+# 	$(eval ARG = $(shell seq 0 2000000 | shuf | head -n 500))
 # 	@valgrind ./push_swap $(ARG) | ./checker_linux $(ARG)
 # 	@echo -n "Instructions: "
 # 	@valgrind ./push_swap $(ARG) | wc -l

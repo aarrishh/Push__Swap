@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arimanuk <arimanuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 21:03:34 by arimanuk          #+#    #+#             */
-/*   Updated: 2025/05/11 20:32:01 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/12 19:26:54 by arimanuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	check(t_stack **a, t_stack **b)
 		else
 		{
 			indexing(a);
-			// printf("tes-?%d\n", size_list(*a));
 			butterfly(a, b, formula_n(size_list(*a)));
 		}
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   butterfly1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arimanuk <arimanuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 19:15:54 by arimanuk          #+#    #+#             */
-/*   Updated: 2025/05/11 21:02:59 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/12 19:39:48 by arimanuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,24 @@ void	indexing(t_stack **a)
 		}
 		tmp = *a;
 		current = current->next;
+	}
+}
+
+void	move_b_to_a(t_stack **a, t_stack **b)
+{
+	int	max;
+	int	pos;
+
+	while (*b)
+	{
+		max = find_max(*b);
+		pos = get_position(*b, max);
+		if (pos <= size_list(*b) / 2)
+			while ((*b)->data != max)
+				rb(b, 1);
+		else
+			while ((*b)->data != max)
+				rrb(b, 1);
+		pa(a, b, 1);
 	}
 }

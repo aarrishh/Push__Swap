@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   butterfly.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arimanuk <arimanuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:54:39 by arimanuk          #+#    #+#             */
-/*   Updated: 2025/05/11 20:58:46 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/12 19:15:01 by arimanuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	get_position(t_stack *b, int value)
 int	find_max(t_stack *b)
 {
 	int	max;
-	
+
 	if (!b)
 		return (0);
 	max = b->data;
@@ -77,21 +77,4 @@ int	find_max(t_stack *b)
 		b = b->next;
 	}
 	return (max);
-}
-
-void	move_b_to_a(t_stack **a, t_stack **b)
-{
-	while (*b)
-	{
-		int max = find_max(*b);
-		int pos = get_position(*b, max);
-		
-		if (pos <= size_list(*b) / 2)
-        	while ((*b)->data != max)
-				rb(b, 1);
-		else
-        	while ((*b)->data != max)
-				rrb(b, 1);
-		pa(a, b, 1);
-	}
 }

@@ -6,7 +6,7 @@
 /*   By: arimanuk <arimanuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 21:30:47 by arimanuk          #+#    #+#             */
-/*   Updated: 2025/05/08 19:04:56 by arimanuk         ###   ########.fr       */
+/*   Updated: 2025/05/12 19:28:32 by arimanuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,23 @@ void	sort_check(t_stack *a, t_stack *b)
 		else
 			write (1, "KO\n", 3);
 	}
+}
+
+size_t	ft_strlen1(const char *str)
+{
+	size_t	i;
+
+	if (str == NULL)
+		return (0);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+int	is_white_space(char c)
+{
+	if ((c >= 9 && c <= 13) || c == 32)
+		return (1);
+	return (0);
 }
